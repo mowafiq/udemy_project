@@ -19,6 +19,23 @@ class _InCourseState extends State<InCourse> {
               children:[ Container(height: 250,decoration: BoxDecoration(image: DecorationImage
                   (image: AssetImage("images/php-course.jpg"),colorFilter: ColorFilter.mode(Color.fromARGB(115, 0, 0, 0),BlendMode.hardLight),
                   fit: BoxFit.cover)),),
+           Column(
+             children: [
+               Padding(
+                    padding: const EdgeInsets.only(right:300,top: 20),
+                    child: Icon(Icons.keyboard_arrow_down_outlined,size: 45,color: Colors.white,),
+                  ),
+          Center(
+            child: Padding(
+                 padding: const EdgeInsets.only(top: 25),
+                 child: Text("lecnum",style: TextStyle(fontSize: 17,color: Colors.white,fontWeight: FontWeight.w300),),
+               ),
+          )
+           
+           
+              ],
+           ),
+              
            ] )
 
           ],
