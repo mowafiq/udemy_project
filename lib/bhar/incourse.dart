@@ -53,8 +53,16 @@ class _InCourseState extends State<InCourse> {
                  Padding(
                      padding: const EdgeInsets.only(left: 10,top: 10),
                       child: Text("PHP & MySQL course for absolute beginners | Become a PHP pro",style: TextStyle(fontSize: 22,fontWeight: FontWeight.w700)),
-                   )
+                   ),
 
+                   
+          const SizedBox(height: 3,),
+
+
+                Padding(
+                     padding: const EdgeInsets.only(right: 300,top: 10),
+                     child: Text("Dary Nazar",style: TextStyle(fontSize: 15),),
+                  ),
 
 
 
