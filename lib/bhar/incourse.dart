@@ -9,9 +9,14 @@ class InCourse extends StatefulWidget {
   State<InCourse> createState() => _InCourseState();
 }
 
-class _InCourseState extends State<InCourse> {
+class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
+ TabController _tabController=TabController(length: 2, vsync: this);
+    
+
+
+
     return  Scaffold(
       body:Column(
           children: [
@@ -55,7 +60,7 @@ class _InCourseState extends State<InCourse> {
                       child: Text("PHP & MySQL course for absolute beginners | Become a PHP pro",style: TextStyle(fontSize: 22,fontWeight: FontWeight.w700)),
                    ),
 
-                   
+
           const SizedBox(height: 3,),
 
 
@@ -65,9 +70,10 @@ class _InCourseState extends State<InCourse> {
                   ),
 
 
+                      
 
-
-
+                Container(child: TabBar(controller: _tabController,indicatorColor: Colors.black,
+                labelColor: Colors.black,unselectedLabelColor: Colors.grey,tabs: [Tab(text: "Lectures",),Tab(text: "More",)],),),
 
 
 
