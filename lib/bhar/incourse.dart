@@ -31,7 +31,10 @@ class _InCourseState extends State<InCourse> {
                  child: Text("lecnum",style: TextStyle(fontSize: 17,color: Colors.white,fontWeight: FontWeight.w300),),
                ),
           )
-           
+           ,Padding(
+               padding: const EdgeInsets.only(top: 13),
+               child: Text("lecnamee",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w400)),
+             ),
            
               ],
            ),
