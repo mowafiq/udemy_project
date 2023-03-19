@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:udemy_project/bhar/2ndtab.dart';
 
 class InCourse extends StatefulWidget {
   const InCourse({super.key});
@@ -8,6 +9,16 @@ class InCourse extends StatefulWidget {
   @override
   State<InCourse> createState() => _InCourseState();
 }
+// String lecnamee="";
+// String lecnum="";
+// Color colorr=Color.fromARGB(0, 255, 255, 255);
+// void _lecnamee(String a){
+//    lecnamee=a;
+
+// }
+// void _lecnum(String a){
+//    lecnum=a;}
+
 
 class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
   @override
@@ -94,11 +105,14 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
                        ),
 
 
+ Expanded(child: TabBarView(controller: _tabController,children: [Text("data"),
+
+           ListView.builder(padding: EdgeInsets.all(3),itemCount: bblist.length,itemBuilder: (context, index) {
+             return ListTile(onTap: (){},title: Text(bblist[index].nn),leading: bblist[index].a);
+           },)   
 
 
-
-
-
+]))
 
 
           ],
