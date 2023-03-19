@@ -90,8 +90,8 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
                                            )
 
 
-  ],
-                ),
+                                  ],
+                       ),
 
 
 
