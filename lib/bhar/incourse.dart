@@ -15,9 +15,11 @@ class _InCourseState extends State<InCourse> {
     return  Scaffold(
       body:Column(
           children: [
-            Container(height: 250,decoration: BoxDecoration(image: DecorationImage
-                (image: AssetImage("images/php-course.jpg"),colorFilter: ColorFilter.mode(Color.fromARGB(115, 0, 0, 0),BlendMode.hardLight),
-                fit: BoxFit.cover)),)
+            Stack(
+              children:[ Container(height: 250,decoration: BoxDecoration(image: DecorationImage
+                  (image: AssetImage("images/php-course.jpg"),colorFilter: ColorFilter.mode(Color.fromARGB(115, 0, 0, 0),BlendMode.hardLight),
+                  fit: BoxFit.cover)),),
+           ] )
 
           ],
 
