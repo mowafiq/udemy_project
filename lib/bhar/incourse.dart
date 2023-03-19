@@ -54,6 +54,8 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
                       ] 
                   ),
 
+ 
+
 
                  Padding(
                      padding: const EdgeInsets.only(left: 10,top: 10),
@@ -61,10 +63,10 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
                    ),
 
 
-          const SizedBox(height: 3,),
+            const SizedBox(height: 3,),
 
 
-                Padding(
+                  Padding(
                      padding: const EdgeInsets.only(right: 300,top: 10),
                      child: Text("Dary Nazar",style: TextStyle(fontSize: 15),),
                   ),
@@ -72,16 +74,24 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
 
                       
 
-                Container(child: TabBar(controller: _tabController,indicatorColor: Colors.black,
-                labelColor: Colors.black,unselectedLabelColor: Colors.grey,tabs: [Tab(text: "Lectures",),Tab(text: "More",)],),),
+                    Row(
+                         children: [Container(width: 200,
+                            child: Container(child:
+                                      Container(child: TabBar(controller: _tabController,indicatorColor: Colors.black,
+                                                labelColor: Colors.black,unselectedLabelColor: Colors.grey,tabs: [Tab(text: "Lectures",),Tab(text: "More",)],),
+                                                ),
+                                         )
+                                      ),
 
 
+                                    Padding(
+                                       padding: const EdgeInsets.only(left: 150),
+                                       child: Icon(Icons.download_for_offline),
+                                           )
 
 
-
-
-
-
+  ],
+                ),
 
 
 
