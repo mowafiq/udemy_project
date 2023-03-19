@@ -44,13 +44,16 @@ class _InCourseState extends State<InCourse> {
                                      )
                                     ),
                                  ),
-              ],
-           ),
-              
-           ] )
+                                ],
+                           ),
+                      ] 
+                  ),
 
 
-
+                 Padding(
+                     padding: const EdgeInsets.only(left: 10,top: 10),
+                      child: Text("PHP & MySQL course for absolute beginners | Become a PHP pro",style: TextStyle(fontSize: 22,fontWeight: FontWeight.w700)),
+                   )
 
 
 
