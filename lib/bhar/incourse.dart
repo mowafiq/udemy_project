@@ -112,22 +112,38 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
                        ),
 
 
- Expanded(child: TabBarView(controller: _tabController,children: [ListView.builder(padding: EdgeInsets.all(3),itemCount: aalist.length,itemBuilder: (context, index) {
-             return ListTile(onTap: (){setState(() { selectedIndex = index;
-               _lecnamee(aalist[index].lecname);_lecnum("Lecture "+(aalist[index].num.toString()));
-             });},title: Text(aalist[index].lecname,style: TextStyle(fontSize: selectedIndex==index ?  17 : 16,fontWeight: selectedIndex==index ? FontWeight.w700: FontWeight.w400),),leading: Padding(
-               padding: const EdgeInsets.all(8.0),
-               child: Text((index+1).toString(),style: TextStyle(fontSize: selectedIndex==index ?  17 : 16,fontWeight: selectedIndex==index ? FontWeight.bold: FontWeight.w400),),
-             ),subtitle:Row(children: [Icon(Icons.closed_caption_off_rounded), Text(aalist[index].timeinf,style: TextStyle(fontWeight: selectedIndex==index ? FontWeight.bold: FontWeight.w400),)]),trailing: Icon(Icons.download_for_offline_outlined)
-             ,tileColor: selectedIndex==index ? Color.fromARGB(74, 203, 191, 241) : null,);
-           },),
-
-           ListView.builder(padding: EdgeInsets.all(3),itemCount: bblist.length,itemBuilder: (context, index) {
-             return ListTile(onTap: (){},title: Text(bblist[index].nn),leading: bblist[index].a);
-           },)   
 
 
-]))
+
+                    Expanded( 
+                        child: TabBarView(controller: _tabController,children: [
+                              ListView.builder(padding: EdgeInsets.all(3),itemCount: aalist.length,itemBuilder: (context, index) {
+                                   return ListTile(onTap: (){setState(() { selectedIndex = index;
+                                           _lecnamee(aalist[index].lecname);_lecnum("Lecture "+(aalist[index].num.toString()));
+                                             });},title: Text(aalist[index].lecname,style: TextStyle(fontSize: selectedIndex==index ?  17 : 16,
+                                             fontWeight: selectedIndex==index ? FontWeight.w700: FontWeight.w400),),leading: Padding(
+                                              padding: const EdgeInsets.all(8.0),
+                                              child: Text((index+1).toString(),style: TextStyle(fontSize: selectedIndex==index ?  17 : 16,
+                                              fontWeight: selectedIndex==index ? FontWeight.bold: FontWeight.w400),),),
+                                              subtitle:Row(
+                                                children: [Icon(Icons.closed_caption_off_rounded), 
+                                                Text(aalist[index].timeinf,style: TextStyle(fontWeight: selectedIndex==index ? FontWeight.bold: FontWeight.w400),)]),
+                                              trailing: Icon(Icons.download_for_offline_outlined),
+                                              tileColor: selectedIndex==index ? Color.fromARGB(74, 203, 191, 241) : null,);
+                                 },),
+
+
+                               ListView.builder(padding: EdgeInsets.all(3),itemCount: bblist.length,itemBuilder: (context, index) {
+                                                return ListTile(onTap: (){},title: Text(bblist[index].nn),leading: bblist[index].a);
+                                  },)    
+                                          
+                                          
+                                  
+                                         ]   
+
+
+                             )
+                        )
 
 
           ],
