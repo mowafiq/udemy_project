@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:udemy_project/bhar/1sttab.dart';
 import 'package:udemy_project/bhar/2ndtab.dart';
 
 class InCourse extends StatefulWidget {
@@ -9,15 +10,21 @@ class InCourse extends StatefulWidget {
   @override
   State<InCourse> createState() => _InCourseState();
 }
-// String lecnamee="";
-// String lecnum="";
-// Color colorr=Color.fromARGB(0, 255, 255, 255);
-// void _lecnamee(String a){
-//    lecnamee=a;
 
-// }
-// void _lecnum(String a){
-//    lecnum=a;}
+String lecnamee="";
+String lecnum="";
+Color colorr=Color.fromARGB(0, 255, 255, 255);
+void _lecnamee(String a){
+   lecnamee=a;
+
+}
+void _lecnum(String a){
+   lecnum=a;
+
+}
+final List<int> _list = List.generate(20, (index) => index);
+final List<bool> _selected = List.generate(20, (index) => false);
+int selectedIndex=80;
 
 
 class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
@@ -44,12 +51,12 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
                          Center(
                             child: Padding(
                                 padding: const EdgeInsets.only(top: 25),
-                                 child: Text("lecnum",style: TextStyle(fontSize: 17,color: Colors.white,fontWeight: FontWeight.w300),),
+                                 child: Text(lecnum,style: TextStyle(fontSize: 17,color: Colors.white,fontWeight: FontWeight.w300),),
                                  ),
                                ),
                          Padding(
                                 padding: const EdgeInsets.only(top: 13),
-                                child: Text("lecnamee",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w400)),
+                                child: Text(lecnamee,style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w400)),
                                  ),
                          Padding(
                                 padding: const EdgeInsets.only(top: 20),
@@ -97,7 +104,7 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
 
                                     Padding(
                                        padding: const EdgeInsets.only(left: 150),
-                                       child: Icon(Icons.download_for_offline),
+                                       child: Icon(Icons.download_for_offline,color: Color.fromARGB(255, 121, 120, 120),),
                                            )
 
 
@@ -105,7 +112,15 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
                        ),
 
 
- Expanded(child: TabBarView(controller: _tabController,children: [Text("data"),
+ Expanded(child: TabBarView(controller: _tabController,children: [ListView.builder(padding: EdgeInsets.all(3),itemCount: aalist.length,itemBuilder: (context, index) {
+             return ListTile(onTap: (){setState(() { selectedIndex = index;
+               _lecnamee(aalist[index].lecname);_lecnum("Lecture "+(aalist[index].num.toString()));
+             });},title: Text(aalist[index].lecname,style: TextStyle(fontSize: selectedIndex==index ?  17 : 16,fontWeight: selectedIndex==index ? FontWeight.w700: FontWeight.w400),),leading: Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text((index+1).toString(),style: TextStyle(fontSize: selectedIndex==index ?  17 : 16,fontWeight: selectedIndex==index ? FontWeight.bold: FontWeight.w400),),
+             ),subtitle:Row(children: [Icon(Icons.closed_caption_off_rounded), Text(aalist[index].timeinf,style: TextStyle(fontWeight: selectedIndex==index ? FontWeight.bold: FontWeight.w400),)]),trailing: Icon(Icons.download_for_offline_outlined)
+             ,tileColor: selectedIndex==index ? Color.fromARGB(74, 203, 191, 241) : null,);
+           },),
 
            ListView.builder(padding: EdgeInsets.all(3),itemCount: bblist.length,itemBuilder: (context, index) {
              return ListTile(onTap: (){},title: Text(bblist[index].nn),leading: bblist[index].a);
