@@ -45,8 +45,8 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
                     Column(
                       children: [
                          Padding(
-                                padding: const EdgeInsets.only(right:300,top: 20),
-                                 child: Icon(Icons.keyboard_arrow_down_outlined,size: 45,color: Colors.white,),
+                                padding: const EdgeInsets.only(right:330,top: 20),
+                                 child: Icon(Icons.keyboard_arrow_down_outlined,size: 50,color: Colors.white),
                                   ),
                          Center(
                             child: Padding(
@@ -103,7 +103,7 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
 
 
                                     Padding(
-                                       padding: const EdgeInsets.only(left: 150),
+                                       padding: const EdgeInsets.only(left: 169),
                                        child: Icon(Icons.download_for_offline,color: Color.fromARGB(255, 121, 120, 120),),
                                            )
 
