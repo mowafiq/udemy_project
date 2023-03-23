@@ -72,8 +72,6 @@ class _InCourseState extends State<InCourse>with TickerProviderStateMixin {
                       ] 
                   ),
 
- ////
-
 
                  Padding(
                      padding: const EdgeInsets.only(left: 10,top: 10),
