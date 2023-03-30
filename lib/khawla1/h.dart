@@ -55,20 +55,25 @@ class Mkk extends StatelessWidget {
             FilterChip(label: Text("it& software"), onSelected: (bool b) {}),
             FilterChip(
                 label: Text("Finance &Accounting "), onSelected: (bool b) {}),
-            FilterChip(label: Text(""), onSelected: (bool b) {}),
-            FilterChip(label: Text("text1"), onSelected: (bool b) {}),
-            FilterChip(label: Text("text1"), onSelected: (bool b) {}),
-            FilterChip(label: Text("text1"), onSelected: (bool b) {}),
-            FilterChip(label: Text("text1"), onSelected: (bool b) {}),
-            FilterChip(label: Text("text1"), onSelected: (bool b) {}),
-            FilterChip(label: Text("text1"), onSelected: (bool b) {}),
+            FilterChip(
+                label: Text("Office Productivity"), onSelected: (bool b) {}),
+            FilterChip(label: Text("Lifestyle"), onSelected: (bool b) {}),
+            FilterChip(label: Text("Health &Fitness"), onSelected: (bool b) {}),
+            FilterChip(
+                label: Text("Teachin & Academice"), onSelected: (bool b) {}),
+            FilterChip(label: Text("Music"), onSelected: (bool b) {}),
+            FilterChip(label: Text("Marketing"), onSelected: (bool b) {}),
+            FilterChip(
+                label: Text("Photography & Video"), onSelected: (bool b) {}),
+            FilterChip(
+                label: Text("Personal Development"), onSelected: (bool b) {}),
           ],
         ),
         Positioned(
             child: Text(
           "Top courses in Design",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ))
+        )),
       ]),
     );
   }
