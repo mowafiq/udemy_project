@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:udemy_project/khawla1/kh1.dart';
 
 class Mkk extends StatelessWidget {
   const Mkk({super.key});
@@ -46,34 +47,39 @@ class Mkk extends StatelessWidget {
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),
-        Wrap(
-          children: [
-            FilterChip(label: Text("Development"), onSelected: (bool b) {}),
-            FilterChip(label: Text("Business"), onSelected: (bool b) {}),
-            FilterChip(
-                label: Text("Personal Development"), onSelected: (bool b) {}),
-            FilterChip(label: Text("it& software"), onSelected: (bool b) {}),
-            FilterChip(
-                label: Text("Finance &Accounting "), onSelected: (bool b) {}),
-            FilterChip(
-                label: Text("Office Productivity"), onSelected: (bool b) {}),
-            FilterChip(label: Text("Lifestyle"), onSelected: (bool b) {}),
-            FilterChip(label: Text("Health &Fitness"), onSelected: (bool b) {}),
-            FilterChip(
-                label: Text("Teachin & Academice"), onSelected: (bool b) {}),
-            FilterChip(label: Text("Music"), onSelected: (bool b) {}),
-            FilterChip(label: Text("Marketing"), onSelected: (bool b) {}),
-            FilterChip(
-                label: Text("Photography & Video"), onSelected: (bool b) {}),
-            FilterChip(
-                label: Text("Personal Development"), onSelected: (bool b) {}),
-          ],
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+          child: Wrap(
+            children: [
+              FilterChip(label: Text("Development"), onSelected: (bool b) {}),
+              FilterChip(label: Text("Business"), onSelected: (bool b) {}),
+              FilterChip(
+                  label: Text("Personal Development"), onSelected: (bool b) {}),
+              FilterChip(label: Text("it& software"), onSelected: (bool b) {}),
+              FilterChip(
+                  label: Text("Finance &Accounting "), onSelected: (bool b) {}),
+              FilterChip(
+                  label: Text("Office Productivity"), onSelected: (bool b) {}),
+              FilterChip(label: Text("Lifestyle"), onSelected: (bool b) {}),
+              FilterChip(
+                  label: Text("Health &Fitness"), onSelected: (bool b) {}),
+              FilterChip(
+                  label: Text("Teachin & Academice"), onSelected: (bool b) {}),
+              FilterChip(label: Text("Music"), onSelected: (bool b) {}),
+              FilterChip(label: Text("Marketing"), onSelected: (bool b) {}),
+              FilterChip(
+                  label: Text("Photography & Video"), onSelected: (bool b) {}),
+              FilterChip(
+                  label: Text("Personal Development"), onSelected: (bool b) {}),
+            ],
+          ),
         ),
         Positioned(
             child: Text(
           "Top courses in Design",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         )),
+        CategoriesWidget(),
       ]),
     );
   }
