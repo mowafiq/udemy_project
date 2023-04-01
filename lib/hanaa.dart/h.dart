@@ -42,7 +42,7 @@ class Aa extends StatelessWidget {
                           side: BorderSide(color: Colors.black)))),
             ),
             SizedBox(
-              width: 15,
+              width: 16,
             ),
             ElevatedButton(
               onPressed: () {},
