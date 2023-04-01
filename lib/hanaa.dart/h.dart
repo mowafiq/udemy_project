@@ -13,7 +13,7 @@ class Aa extends StatelessWidget {
         title: Text("My courses"),
         titleTextStyle: TextStyle(
             color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         actions: [
           IconButton(
             icon: Icon(Icons.search_outlined),
