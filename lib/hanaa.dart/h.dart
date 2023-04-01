@@ -11,13 +11,18 @@ class Aa extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("My courses"),
+        titleTextStyle: TextStyle(
+            color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
+        backgroundColor: Colors.black,
         actions: [
           IconButton(
             icon: Icon(Icons.search_outlined),
+            color: Colors.black,
             onPressed: () {},
           ),
           IconButton(
             icon: Icon(Icons.shopping_cart_outlined),
+            color: Colors.black,
             onPressed: () {},
           ),
         ],
@@ -92,7 +97,7 @@ class Aa extends StatelessWidget {
                       MaterialStateProperty.all<Color>(Colors.white),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25.0),
+                          borderRadius: BorderRadius.circular(26.0),
                           side: BorderSide(color: Colors.black)))),
             ),
           ],
