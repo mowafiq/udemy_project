@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -11,7 +8,6 @@
             "type": "chrome",
             "webRoot": "${workspaceFolder}"
         },
-        
         {
             "name": "udemy_project",
             "request": "launch",
@@ -28,14 +24,18 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
+        },
+        {
+            "name": "udemy_project (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/bhar/main.dart"
+        },
+        {
+            "name": "Flutter Tests",
+            "program": "test",
+            "request": "launch",
+            "type": "dart"
         }
-       ,
-            {
-                "name": "udemy_project (release mode)",
-                "request": "launch",
-                "type": "dart",
-                "program": "lib/bhar/main.dart",
-            }
-        
     ]
 }
