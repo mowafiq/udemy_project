@@ -10,7 +10,7 @@ Padding(
         icon: Icon(Icons.search),
         onPressed: () {
           // Perform the search here
-        },
+    },
       ),
       Expanded(
         // Use a Material design search bar
@@ -27,8 +27,8 @@ Padding(
               borderRadius: BorderRadius.circular(20.0),
             ),
           ),
-        ),
-      ),
-    ],
-  ),
+           ),
+),
+],
+),
 ),
